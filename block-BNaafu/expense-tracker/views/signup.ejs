@@ -1,0 +1,16 @@
+<%include partials/header%>
+<main>
+  <fieldset style="flex-direction: column;" class="flex">
+    <h1 style="color: red;"><%= error %></h1>
+    <form action="/users/signup" method="POST">
+      <input type="firstname" name="firstname" placeholder="First Name" />
+      <input type="lastname" name="lastname" placeholder="Last Name" />
+      <input type="email" name="email" placeholder="Email" />
+      <input type="password" name="password" placeholder="Password" />
+      <input type="age" name="age" placeholder="age" />
+      <input type="phone" name="phone" placeholder="phone" />
+      <input type="country" name="country" placeholder="country" />
+      <input class="submit" type="submit" placeholder="submit" />
+    </form>
+  </fieldset>
+</main>

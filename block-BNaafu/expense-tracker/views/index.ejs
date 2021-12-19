@@ -1,0 +1,15 @@
+<% include partials/header %>
+<main>
+  <section class="wrapper">
+    <div class="typing-demo">
+      <h2>Expense Tracker</h2>
+    </div>
+  </section>
+  <section>
+    <% if(user) { %>
+    <button class="btn dashb">
+      <a href="/dashboard"> Go to dashboard </a>
+    </button>
+    <% } %>
+  </section>
+</main>
