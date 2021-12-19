@@ -1,0 +1,31 @@
+<% include partials/header %>
+<main>
+  
+  <fieldset style="flex-direction: column;" class="flex">  
+    <h1 style="color: red;"><%= error %></h1>
+    <form action="/users/login" method="POST">
+      <input type="email" name="email" placeholder="Email" />
+      <input type="password" name="password" placeholder="Password" />
+      <input class="submit" type="submit" placeholder="submit" />
+       <a class="f-pw" href="/users/forgetPw/email">Forget password?</a>
+    </form>
+  </fieldset>
+   
+  <h3 class="or">OR</h3>
+  <section>
+    <div class="google-login">
+      <button class="btn">
+        <a href="/auth/github">
+          <i class="fab fa-github"></i>
+          <span> Login with Github </span>
+        </a>
+      </button>
+      <button class="btn">
+        <a href="/auth/google">
+          <i class="fab fa-google"></i>
+          <span> Login with Google </span>
+        </a>
+      </button>
+    </div>
+  </section>
+</main>

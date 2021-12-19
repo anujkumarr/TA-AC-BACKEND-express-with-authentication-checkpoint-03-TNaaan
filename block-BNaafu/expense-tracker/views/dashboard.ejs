@@ -1,0 +1,63 @@
+<% include partials/header %>
+<main>
+  <main>
+    <section class="flex flex-start container">
+      <form
+        class="form form-control-1"
+        action="/dashboard/filter"
+        method="POST"
+      >
+        <input style="color: rgb(255, 255, 255);" class="date-1" name="initialdate" type="date" />
+        <input style="color: rgb(255, 255, 255);" class="date-1" name="finaldate" type="date" />
+        <input class="submit-button" type="submit" value="Find By Dates" />
+      </form>
+      <div class="list-filter flex flex-start">
+        <div>
+          <span> <a class="inc" href="/dashboard/income"> Incomes </a> </span>
+          <span> <a class="inc" href="/dashboard/expense">Expenses  </a> </span>
+          <span>
+            <a class="inc" href="/dashboard"> Incomes And Expenses </a>
+          </span>
+        </div>
+      </div>
+      <div>
+        <button class="btn-primary">
+          <a href="/income"> <i class="fas fa-plus-square"></i> Add Income </a>
+        </button>
+        <button class="btn-primary">
+          <a href="/Expense">
+            <i class="fas fa-plus-square"></i> Add Expenses
+          </a>
+        </button>
+      </div>
+    </section>
+    <section>
+      <div>
+        <table class="container">
+          <tr>
+            <th>Date</th>
+            <th>Exp/Inc</th>
+            <th>Category</th>
+            <th>Amount</th>
+          </tr>
+          <% budgetdata.forEach(elm => { %>
+          <tr>
+            <td><%= moment(elm.date).format('DD/MM/YYYY') %></td>
+            <td><%= elm.buget %></td>
+            <td><%= elm.category %></td>
+            <td>💲 <%= elm.amount %></td>
+          </tr>
+          <% }); %>
+        </table>
+        <table class="container">
+          <tr>
+            <th>Savings</th>
+          </tr>
+          <tr>
+            <td>💰<%= savings %></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </main>
+</main

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Reset password</title>
+</head>
+<body>
+   <h2 style="text-align: center;color: rgb(218, 79, 79);margin-top: 2.5rem;font-size: 1.25rem;"><%= error %></h2>
+  <fieldset  class="flex" style="flex-direction: column;">
+     <h2 style="color:rgb(36, 50, 175); font-size: 1.1rem;">Reset your password</h2>
+
+    <form action=<%= url %> method="POST">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Password" />
+    <br>
+    <label for="password2">Confirm password</label>
+    <input type="password" name="password2" id="password2" placeholder="Confirm password" />
+    <br>
+    <input style="background-color: rgba(45, 180, 104, 0.8);" type="submit" value="Reset password" />
+  </form>
+  </fieldset>
+  
+</body>
+</html>
